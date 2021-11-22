@@ -23,7 +23,7 @@ public class UserController {
     @GetMapping
     public List<Users> usuarios(){
         return (List<Users>) interfaceUser.findAll();
-    };
+    }
     
     @PostMapping("/inicio")
     public UsersSesion acceso(@RequestBody Users us){
