@@ -1,7 +1,6 @@
 package com.sv.modelos;
 
 
-import org.springframework.web.multipart.MultipartFile;
 
 public class MascotasUpload {
 
@@ -9,8 +8,10 @@ public class MascotasUpload {
 	private String nombre;
     private String sexo;
     private Integer edad;
+    private String raza;
     private byte[] foto;
     private String fotoString;
+    private Integer iduser;
 
 
 	public Integer getIdmascota() {
@@ -54,5 +55,23 @@ public class MascotasUpload {
 		this.foto = foto;
 	}
 
+	public String getRaza() {
+		return raza;
+	}
+
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+
+	public Integer getIduser() {
+		return iduser;
+	}
+
+	public void setIduser(Integer iduser) {
+		this.iduser = iduser;
+	}
+	
+
+	
     
 }

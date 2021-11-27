@@ -41,6 +41,11 @@ public class MascotasController {
 			mascota.setNombre(mascotasUpload.getNombre());
 			mascota.setEdad(mascotasUpload.getEdad());
 			mascota.setSexo(mascotasUpload.getSexo());
+			Users user = new Users();
+			user.setIduser(mascotasUpload.getIduser());
+			System.out.println(user.getIduser().toString());
+			mascota.setIduser(user);
+			mascota.setRaza(mascotasUpload.getRaza());
 			StringBuilder builder = new StringBuilder();
 			//Obtener la ruta home del usuario
 			builder.append(System.getProperty("user.home"));
@@ -67,34 +72,26 @@ public class MascotasController {
 
 	@GetMapping("/lista")
 	public List<MascotasUpload> ListaMascotas() {
-
 		List<Mascotas> listaMascotas = (List<Mascotas>) interfaceMascota.findAll();
 		List<MascotasUpload> listamascotasUpload = new ArrayList<MascotasUpload>();
-
-
 		for (int i = 0; i < listaMascotas.size(); i++) {
 			MascotasUpload mascotasUpload = new MascotasUpload();
 			Mascotas mascotas = new Mascotas();
 			mascotas = listaMascotas.get(i);
-
 			mascotasUpload.setIdmascota(mascotas.getIdmascota());
 			mascotasUpload.setNombre(mascotas.getNombre());
 			mascotasUpload.setEdad(mascotas.getEdad());
 			mascotasUpload.setSexo(mascotas.getSexo());
-
+			mascotasUpload.setRaza(mascotas.getRaza());
 			Path path = Paths.get(mascotas.getUrlfoto());
-
 			try {
 				String base64String = Base64.encodeBase64URLSafeString(Files.readAllBytes(path));
 				mascotasUpload.setFotoString(base64String);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
 			listamascotasUpload.add(mascotasUpload);
 		}
-
-
 		return listamascotasUpload;
 	}
 

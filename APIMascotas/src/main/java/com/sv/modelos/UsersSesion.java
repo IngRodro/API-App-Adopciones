@@ -3,9 +3,18 @@ package com.sv.modelos;
 
 public class UsersSesion {
 	
+	private Integer id;
 	private String username;
     private String password;
     private String estado;
+    
+    
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getUsername() {
 		return username;
 	}

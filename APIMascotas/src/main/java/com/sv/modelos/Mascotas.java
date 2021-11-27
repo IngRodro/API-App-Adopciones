@@ -16,9 +16,32 @@ public class Mascotas {
     @Column
     private String sexo;
     @Column
+    private String raza;
+    @Column
     private String urlfoto;
+    @ManyToOne
+    @JoinColumn(name =	"iduser")
+    private Users iduser;
 
-    public Integer getIdmascota() {
+    
+    public String getRaza() {
+		return raza;
+	}
+
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+
+
+	public Users getIduser() {
+		return iduser;
+	}
+
+	public void setIduser(Users iduser) {
+		this.iduser = iduser;
+	}
+
+	public Integer getIdmascota() {
         return idmascota;
     }
 

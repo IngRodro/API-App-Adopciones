@@ -39,6 +39,7 @@ public class UserController {
     		Users usuario = usuarios.get(i);
     	     if(us.getUsername().equals(usuario.getUsername()) && us.getPassword().equals(usuario.getPassword())) {
     	    	 verificacion = true;
+    	    	 user.setId(usuario.getIduser());
     	     }
     	     
     	    }
