@@ -31,8 +31,7 @@ public class MascotasController {
 
 
 	@PostMapping("/upload")
-	public void uploadFile(@RequestBody MascotasUpload mascotasUpload)
-			throws IOException {
+	public void uploadFile(@RequestBody MascotasUpload mascotasUpload)throws IOException {
 		Mascotas mascota = new Mascotas();
 
 		if (mascotasUpload.getFoto() == null || mascotasUpload.getFoto().length == 0) {
