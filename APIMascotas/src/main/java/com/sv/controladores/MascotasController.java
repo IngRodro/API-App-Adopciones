@@ -18,7 +18,7 @@ import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.sv.modelos.MascotasUpload;
+import com.sv.modelos.MascotasRequest;
 
 import javax.imageio.ImageIO;
 
@@ -31,7 +31,7 @@ public class MascotasController {
 
 
 	@PostMapping("/upload")
-	public void uploadFile(@RequestBody MascotasUpload mascotasUpload)throws IOException {
+	public void uploadFile(@RequestBody MascotasRequest mascotasUpload)throws IOException {
 		Mascotas mascota = new Mascotas();
 
 		if (mascotasUpload.getFoto() == null || mascotasUpload.getFoto().length == 0) {
@@ -40,10 +40,7 @@ public class MascotasController {
 			mascota.setNombre(mascotasUpload.getNombre());
 			mascota.setEdad(mascotasUpload.getEdad());
 			mascota.setSexo(mascotasUpload.getSexo());
-			Users user = new Users();
-			user.setIduser(mascotasUpload.getIduser());
-			System.out.println(user.getIduser().toString());
-			mascota.setIduser(user);
+			mascota.setIduser(mascotasUpload.getIduser());
 			mascota.setRaza(mascotasUpload.getRaza());
 			StringBuilder builder = new StringBuilder();
 			//Obtener la ruta home del usuario
@@ -70,11 +67,11 @@ public class MascotasController {
 	}
 
 	@GetMapping("/lista")
-	public List<MascotasUpload> ListaMascotas() {
+	public List<MascotasRequest> ListaMascotas() {
 		List<Mascotas> listaMascotas = (List<Mascotas>) interfaceMascota.findAll();
-		List<MascotasUpload> listamascotasUpload = new ArrayList<MascotasUpload>();
+		List<MascotasRequest> listamascotasUpload = new ArrayList<MascotasRequest>();
 		for (int i = 0; i < listaMascotas.size(); i++) {
-			MascotasUpload mascotasUpload = new MascotasUpload();
+			MascotasRequest mascotasUpload = new MascotasRequest();
 			Mascotas mascotas = new Mascotas();
 			mascotas = listaMascotas.get(i);
 			mascotasUpload.setIdmascota(mascotas.getIdmascota());

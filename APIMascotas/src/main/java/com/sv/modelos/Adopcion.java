@@ -15,7 +15,7 @@ public class Adopcion {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-	private Integer idAdopcion;
+	private Integer idadopcion;
 	@ManyToOne
     @JoinColumn(name =	"idmascota")
 	private Mascotas idMascota;
@@ -24,10 +24,10 @@ public class Adopcion {
 	private Users idUsuarioAdopta;
 	private String estado;
 	public Integer getIdAdopcion() {
-		return idAdopcion;
+		return idadopcion;
 	}
-	public void setIdAdopcion(Integer idAdopcion) {
-		this.idAdopcion = idAdopcion;
+	public void setIdAdopcion(Integer idadopcion) {
+		this.idadopcion = idadopcion;
 	}
 	public Mascotas getIdMascota() {
 		return idMascota;
