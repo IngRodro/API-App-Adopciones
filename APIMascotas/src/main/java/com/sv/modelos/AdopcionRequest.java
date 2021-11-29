@@ -3,8 +3,8 @@ package com.sv.modelos;
 
 public class AdopcionRequest {
 	private Integer idAdopcion;
-	private Integer idMascota;
-	private Integer idUsuarioAdopta;
+	private Mascotas idMascota;
+	private Users idUsuarioAdopta;
 	private String estado;
 	public Integer getIdAdopcion() {
 		return idAdopcion;
@@ -12,16 +12,16 @@ public class AdopcionRequest {
 	public void setIdAdopcion(Integer idAdopcion) {
 		this.idAdopcion = idAdopcion;
 	}
-	public Integer getIdMascota() {
+	public Mascotas getIdMascota() {
 		return idMascota;
 	}
-	public void setIdMascota(Integer idMascota) {
+	public void setIdMascota(Mascotas idMascota) {
 		this.idMascota = idMascota;
 	}
-	public Integer getIdUsuarioAdopta() {
+	public Users getIdUsuarioAdopta() {
 		return idUsuarioAdopta;
 	}
-	public void setIdUsuarioAdopta(Integer idUsuarioAdopta) {
+	public void setIdUsuarioAdopta(Users idUsuarioAdopta) {
 		this.idUsuarioAdopta = idUsuarioAdopta;
 	}
 	public String getEstado() {

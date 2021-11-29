@@ -22,9 +22,21 @@ public class Mascotas {
     @ManyToOne
     @JoinColumn(name =	"iduser")
     private Users iduser;
+    @Column
+    private String estado;
 
     
-    public String getRaza() {
+    
+    
+    public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getRaza() {
 		return raza;
 	}
 

@@ -4,8 +4,17 @@ public class AdopcionResponse {
 
 	private Integer idadopcion;
 	private MascotasResponse idMascota;
+	private Users idUsuarioAdopta;
 	private String estado;
 	
+	
+	
+	public Users getIdUsuarioAdopta() {
+		return idUsuarioAdopta;
+	}
+	public void setIdUsuarioAdopta(Users idUsuarioAdopta) {
+		this.idUsuarioAdopta = idUsuarioAdopta;
+	}
 	public Integer getIdadopcion() {
 		return idadopcion;
 	}

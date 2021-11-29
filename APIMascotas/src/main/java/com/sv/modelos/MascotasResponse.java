@@ -8,7 +8,7 @@ public class MascotasResponse {
     private Integer edad;
     private String raza;
     private String fotoString;
-    private Integer iduser;
+    private Users iduser;
 
 
 	public Integer getIdmascota() {
@@ -54,11 +54,11 @@ public class MascotasResponse {
 		this.raza = raza;
 	}
 
-	public Integer getIduser() {
+	public Users getIduser() {
 		return iduser;
 	}
 
-	public void setIduser(Integer iduser) {
+	public void setIduser(Users iduser) {
 		this.iduser = iduser;
 	}
 	

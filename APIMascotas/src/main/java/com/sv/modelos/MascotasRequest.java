@@ -10,7 +10,6 @@ public class MascotasRequest {
     private Integer edad;
     private String raza;
     private byte[] foto;
-    private String fotoString;
     private Users iduser;
 
 
@@ -20,14 +19,6 @@ public class MascotasRequest {
 
 	public void setIdmascota(Integer idmascota) {
 		this.idmascota = idmascota;
-	}
-
-	public String getFotoString() {
-		return fotoString;
-	}
-
-	public void setFotoString(String fotoString) {
-		this.fotoString = fotoString;
 	}
 
 	public String getNombre() {

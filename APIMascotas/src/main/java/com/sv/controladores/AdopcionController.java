@@ -24,6 +24,7 @@ import com.sv.modelos.MascotasRequest;
 import com.sv.modelos.MascotasResponse;
 import com.sv.modelos.Users;
 import com.sv.repositorio.InterfaceAdopcion;
+import com.sv.repositorio.InterfaceMascota;
 
 @RestController
 @RequestMapping("/Adopcion")
@@ -31,24 +32,36 @@ public class AdopcionController {
 
 	@Autowired
 	private InterfaceAdopcion interfaceAdopcion;
+	@Autowired
+	private InterfaceMascota interfaceMascota;
 	
 	@PostMapping("/save")
 	public void saveAdopcion(@RequestBody AdopcionRequest adopcionrequest) {
 		
 		Adopcion adopcion = new Adopcion();
-		Users user = new Users();
-		Mascotas mascota = new Mascotas();
-		user.setIduser(adopcionrequest.getIdUsuarioAdopta());
-		mascota.setIdmascota(adopcionrequest.getIdMascota());
 		adopcion.setEstado(adopcionrequest.getEstado());
-		adopcion.setIdMascota(mascota);
-		adopcion.setIdUsuarioAdopta(user);
+		adopcion.setIdMascota(adopcionrequest.getIdMascota());
+		adopcion.setIdUsuarioAdopta(adopcionrequest.getIdUsuarioAdopta());
+		
+
+		List<Mascotas> listaMascotas = interfaceMascota.findByIdmascota(adopcionrequest.getIdMascota().getIdmascota());
+		
+		if(listaMascotas.size() ==1) {
+			Mascotas mascotas = new Mascotas();
+			for(int i = 0; i<listaMascotas.size(); i++) {
+				
+				mascotas = listaMascotas.get(i);
+			
+			}
+			mascotas.setEstado("Proceso de Adopcion");
+			interfaceMascota.save(mascotas);
+		}
 		
 		interfaceAdopcion.save(adopcion);
 		
 	}
 	
-	@GetMapping("/misAdopciones")
+	@PostMapping("/misAdopciones")
 	public List<AdopcionResponse> misAdopciones(@RequestBody Users user) {
 		
 		List<Adopcion> listaAdopciones = interfaceAdopcion.findByIdUsuarioAdopta(user);
@@ -60,11 +73,15 @@ public class AdopcionController {
 			AdopcionResponse adopcionResponse = new AdopcionResponse();
 			adopcionResponse.setEstado(adopcion.getEstado());
 			adopcionResponse.setIdadopcion(adopcion.getIdAdopcion());
+			adopcionResponse.setIdUsuarioAdopta(adopcion.getIdUsuarioAdopta());
 			
 			MascotasResponse mascotaResponse = new MascotasResponse();
 			mascotaResponse.setEdad(adopcion.getIdMascota().getEdad());
 			mascotaResponse.setNombre(adopcion.getIdMascota().getNombre());
 			mascotaResponse.setSexo(adopcion.getIdMascota().getSexo());
+			mascotaResponse.setRaza(adopcion.getIdMascota().getRaza());
+			mascotaResponse.setIdmascota(adopcion.getIdMascota().getIdmascota());
+			mascotaResponse.setIduser(adopcion.getIdMascota().getIduser());
 			Path path = Paths.get(adopcion.getIdMascota().getUrlfoto());
 			try {
 				String base64String = Base64.encodeBase64URLSafeString(Files.readAllBytes(path));
@@ -72,6 +89,9 @@ public class AdopcionController {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			
+			adopcionResponse.setIdMascota(mascotaResponse);
+			listaAdopcionesResponse.add(adopcionResponse);
 		}
 		
 		return listaAdopcionesResponse;

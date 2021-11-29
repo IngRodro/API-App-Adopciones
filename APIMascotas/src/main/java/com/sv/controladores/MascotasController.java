@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.sv.modelos.MascotasRequest;
+import com.sv.modelos.MascotasResponse;
 
 import javax.imageio.ImageIO;
 
@@ -31,17 +32,17 @@ public class MascotasController {
 
 
 	@PostMapping("/upload")
-	public void uploadFile(@RequestBody MascotasRequest mascotasUpload)throws IOException {
+	public void uploadFile(@RequestBody MascotasRequest mascotasRequest)throws IOException {
 		Mascotas mascota = new Mascotas();
 
-		if (mascotasUpload.getFoto() == null || mascotasUpload.getFoto().length == 0) {
+		if (mascotasRequest.getFoto() == null || mascotasRequest.getFoto().length == 0) {
 		} else {
 
-			mascota.setNombre(mascotasUpload.getNombre());
-			mascota.setEdad(mascotasUpload.getEdad());
-			mascota.setSexo(mascotasUpload.getSexo());
-			mascota.setIduser(mascotasUpload.getIduser());
-			mascota.setRaza(mascotasUpload.getRaza());
+			mascota.setNombre(mascotasRequest.getNombre());
+			mascota.setEdad(mascotasRequest.getEdad());
+			mascota.setSexo(mascotasRequest.getSexo());
+			mascota.setIduser(mascotasRequest.getIduser());
+			mascota.setRaza(mascotasRequest.getRaza());
 			StringBuilder builder = new StringBuilder();
 			//Obtener la ruta home del usuario
 			builder.append(System.getProperty("user.home"));
@@ -51,11 +52,11 @@ public class MascotasController {
 			builder.append("spring_upload_example");
 			builder.append(File.separator);
 			//Nombre de la imagen
-			builder.append(mascotasUpload.getNombre() + "_" + mascotasUpload.getEdad() + "_" + ".jpeg");
+			builder.append(mascotasRequest.getNombre() + "_" + mascotasRequest.getEdad() + "_"+ mascotasRequest.getIduser().getIduser() + ".jpeg");
 
 			mascota.setUrlfoto(builder.toString());
 			//Asignacion del arreglo de bits de la imagen
-			byte[] fileBytes = mascotasUpload.getFoto();
+			byte[] fileBytes = mascotasRequest.getFoto();
 			//Asignando ruta
 			Path path = Paths.get(builder.toString());
 			//Creando la imagen en la ruta asignada
@@ -67,28 +68,31 @@ public class MascotasController {
 	}
 
 	@GetMapping("/lista")
-	public List<MascotasRequest> ListaMascotas() {
+	public List<MascotasResponse> ListaMascotas() {
 		List<Mascotas> listaMascotas = (List<Mascotas>) interfaceMascota.findAll();
-		List<MascotasRequest> listamascotasUpload = new ArrayList<MascotasRequest>();
+		List<MascotasResponse> listamascotasRequest = new ArrayList<MascotasResponse>();
 		for (int i = 0; i < listaMascotas.size(); i++) {
-			MascotasRequest mascotasUpload = new MascotasRequest();
+			MascotasResponse mascotasResponse = new MascotasResponse();
 			Mascotas mascotas = new Mascotas();
 			mascotas = listaMascotas.get(i);
-			mascotasUpload.setIdmascota(mascotas.getIdmascota());
-			mascotasUpload.setNombre(mascotas.getNombre());
-			mascotasUpload.setEdad(mascotas.getEdad());
-			mascotasUpload.setSexo(mascotas.getSexo());
-			mascotasUpload.setRaza(mascotas.getRaza());
-			Path path = Paths.get(mascotas.getUrlfoto());
-			try {
-				String base64String = Base64.encodeBase64URLSafeString(Files.readAllBytes(path));
-				mascotasUpload.setFotoString(base64String);
-			} catch (IOException e) {
-				e.printStackTrace();
+			if(mascotas.getEstado() == null) {
+				mascotasResponse.setIdmascota(mascotas.getIdmascota());
+				mascotasResponse.setNombre(mascotas.getNombre());
+				mascotasResponse.setEdad(mascotas.getEdad());
+				mascotasResponse.setSexo(mascotas.getSexo());
+				mascotasResponse.setRaza(mascotas.getRaza());
+				mascotasResponse.setIduser(mascotas.getIduser());
+				Path path = Paths.get(mascotas.getUrlfoto());
+				try {
+					String base64String = Base64.encodeBase64URLSafeString(Files.readAllBytes(path));
+					mascotasResponse.setFotoString(base64String);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				listamascotasRequest.add(mascotasResponse);
 			}
-			listamascotasUpload.add(mascotasUpload);
 		}
-		return listamascotasUpload;
+		return listamascotasRequest;
 	}
 
 	
