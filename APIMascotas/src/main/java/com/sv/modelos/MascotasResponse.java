@@ -9,6 +9,28 @@ public class MascotasResponse {
     private String raza;
     private String fotoString;
     private Users iduser;
+    private String estado;
+    private Integer idAdopcion;
+
+    
+    
+    
+    
+    public Integer getIdAdopcion() {
+		return idAdopcion;
+	}
+
+	public void setIdAdopcion(Integer idAdopcion) {
+		this.idAdopcion = idAdopcion;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 
 
 	public Integer getIdmascota() {

@@ -27,6 +27,8 @@ public class Users {
     private String departamento;
     @Column
     private String municipio;
+    @Column
+    private String telefono;
 
     public Integer getIduser() {
         return iduser;
@@ -82,4 +84,14 @@ public class Users {
     public void setMunicipio(String municipio) {
         this.municipio = municipio;
     }
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+    
+    
 }

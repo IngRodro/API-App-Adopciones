@@ -7,11 +7,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -98,5 +101,70 @@ public class AdopcionController {
 		
 		
 	}
+	
+	@PostMapping("/misMascotasAdopciones")
+	public List<AdopcionResponse> misMascotasAdoptadas(@RequestBody Users user) {
+		
+		List<Adopcion> listaAdopciones = (List<Adopcion>) interfaceAdopcion.findAll();
+		List<AdopcionResponse> listaAdopcionesResponse = new ArrayList<AdopcionResponse>();
+		
+		for(int i=0; i<listaAdopciones.size(); i++) {
+			Adopcion adopcion = listaAdopciones.get(i);
+			
+			if(adopcion.getIdMascota().getIduser().getIduser() == user.getIduser()) {
+				AdopcionResponse adopcionResponse = new AdopcionResponse();
+				adopcionResponse.setEstado(adopcion.getEstado());
+				adopcionResponse.setIdadopcion(adopcion.getIdAdopcion());
+				adopcionResponse.setIdUsuarioAdopta(adopcion.getIdUsuarioAdopta());
+				
+				MascotasResponse mascotaResponse = new MascotasResponse();
+				mascotaResponse.setEdad(adopcion.getIdMascota().getEdad());
+				mascotaResponse.setNombre(adopcion.getIdMascota().getNombre());
+				mascotaResponse.setSexo(adopcion.getIdMascota().getSexo());
+				mascotaResponse.setRaza(adopcion.getIdMascota().getRaza());
+				mascotaResponse.setIdmascota(adopcion.getIdMascota().getIdmascota());
+				mascotaResponse.setIduser(adopcion.getIdMascota().getIduser());
+				Path path = Paths.get(adopcion.getIdMascota().getUrlfoto());
+				try {
+					String base64String = Base64.encodeBase64URLSafeString(Files.readAllBytes(path));
+					mascotaResponse.setFotoString(base64String);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				
+				adopcionResponse.setIdMascota(mascotaResponse);
+				listaAdopcionesResponse.add(adopcionResponse);
+			}
+		}
+		
+		return listaAdopcionesResponse;
+		
+		
+	}
+	
+	@PutMapping("/adopcionfinalizada/{id}")
+	public boolean Finish(@PathVariable("id") Integer idAdopcion){
+		try {
+			List<Adopcion> listaadopcion = (List<Adopcion>) interfaceAdopcion.findAll();
+			for(int i=0; i<listaadopcion.size(); i++) {
+				Adopcion adopcion = listaadopcion.get(i);
+				
+				if(adopcion.getIdAdopcion() == idAdopcion){
+					adopcion.setEstado("Adopcion Completa");
+					
+					Mascotas mascotas = adopcion.getIdMascota();
+					mascotas.setEstado("Adoptado");
+					interfaceMascota.save(mascotas);
+					interfaceAdopcion.save(adopcion);
+				}
+					
+			}
+			return true;
+		}catch (Exception e) {
+			return false;
+		}
+	}
+	
+
 	
 }
