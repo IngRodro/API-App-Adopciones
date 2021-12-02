@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.sv.modelos.Adopcion;
@@ -55,7 +56,8 @@ public class MascotasController {
 			StringBuilder builder = new StringBuilder();
 			builder.append("src/main/resources/static/images/");
 			//Nombre de la imagen
-			builder.append(mascotasRequest.getNombre() + "_" + mascotasRequest.getEdad() + "_"+ mascotasRequest.getIduser().getIduser() + ".jpeg");
+			Date date = new Date();
+			builder.append(mascotasRequest.getNombre() + "_" + mascotasRequest.getEdad() + "_"+ mascotasRequest.getIduser().getIduser() + date + ".jpeg");
 
 			mascota.setUrlfoto(builder.toString());
 			//Asignacion del arreglo de bits de la imagen

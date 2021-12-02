@@ -1,833 +1,97 @@
-2021-12-01 09:01:48.279  INFO 9288 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 9288 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 09:01:48.283  INFO 9288 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 09:01:48.348  INFO 9288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 09:01:48.349  INFO 9288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 09:01:49.133  INFO 9288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 09:01:49.334  INFO 9288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 192 ms. Found 3 JPA repository interfaces.
-2021-12-01 09:01:50.162  INFO 9288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 09:01:50.173  INFO 9288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 09:01:50.174  INFO 9288 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 09:01:50.283  INFO 9288 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 09:01:50.283  INFO 9288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1934 ms
-2021-12-01 09:01:50.456  INFO 9288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 09:01:59.269  INFO 9288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 09:01:59.317  INFO 9288 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 09:01:59.377  INFO 9288 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 09:01:59.545  INFO 9288 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 09:01:59.688  INFO 9288 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 09:02:01.035  INFO 9288 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 09:02:01.048  INFO 9288 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 09:02:01.461  WARN 9288 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 09:02:01.715  WARN 9288 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 09:02:01.897  INFO 9288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 09:02:01.940  INFO 9288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 09:02:01.949  INFO 9288 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 14.089 seconds (JVM running for 15.26)
-2021-12-01 09:02:33.244  INFO 9288 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 09:02:33.244  INFO 9288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 09:02:33.245  INFO 9288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 09:16:23.146  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@285cf7f9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.148  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@552d05f2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.150  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a01d391 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.151  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36910f49 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.152  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@52d7d162 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.153  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6fe85c5f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.154  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7be18768 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.155  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4534241a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.156  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2904b11f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:16:23.156  WARN 9288 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a31ac4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.457  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4141f660 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.458  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c151959 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.459  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e3d0f4b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.460  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70811c1a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.461  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@41f3ff1b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.462  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7598e9ad (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.462  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2389f702 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.463  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b105ea5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.464  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54569fb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 09:41:56.464  WARN 9288 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37222d7f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.182  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@575b0af (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.183  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1db5deba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.184  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4561d655 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.185  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6d39e69e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.185  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@392d7235 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.186  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a5e2ba4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.187  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@41c697c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.188  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@63e99474 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.191  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3187eee6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:03:41.192  WARN 9288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4affe079 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 10:07:11.973  INFO 9288 --- [RMI TCP Connection(72)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 10:07:12.020  INFO 9288 --- [RMI TCP Connection(72)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 10:07:12.023  INFO 9288 --- [RMI TCP Connection(72)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 10:07:17.270  INFO 9288 --- [RMI TCP Connection(72)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 10:36:38.370  INFO 7840 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 7840 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 10:36:38.371  INFO 7840 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 10:36:38.409  INFO 7840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 10:36:38.410  INFO 7840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 10:36:38.851  INFO 7840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 10:36:38.972  INFO 7840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 3 JPA repository interfaces.
-2021-12-01 10:36:39.477  INFO 7840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 10:36:39.488  INFO 7840 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 10:36:39.488  INFO 7840 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 10:36:39.571  INFO 7840 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 10:36:39.571  INFO 7840 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
-2021-12-01 10:36:39.686  INFO 7840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 10:36:41.060  INFO 7840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 10:36:41.097  INFO 7840 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 10:36:41.145  INFO 7840 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 10:36:41.276  INFO 7840 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 10:36:41.377  INFO 7840 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 10:36:41.974  INFO 7840 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 10:36:41.982  INFO 7840 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 10:36:42.291  WARN 7840 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 10:36:42.478  WARN 7840 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 10:36:42.579  INFO 7840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 10:36:42.608  INFO 7840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 10:36:42.616  INFO 7840 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 4.529 seconds (JVM running for 5.162)
-2021-12-01 10:36:45.465  INFO 7840 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 10:36:45.465  INFO 7840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 10:36:45.466  INFO 7840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 10:43:04.262  INFO 7840 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 10:43:04.288  INFO 7840 --- [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 10:43:04.290  INFO 7840 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 10:43:09.693  INFO 7840 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 11:00:33.591  INFO 16908 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 16908 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 11:00:33.592  INFO 16908 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 11:00:33.631  INFO 16908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 11:00:33.632  INFO 16908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 11:00:34.147  INFO 16908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 11:00:34.270  INFO 16908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 3 JPA repository interfaces.
-2021-12-01 11:00:34.770  INFO 16908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 11:00:34.778  INFO 16908 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 11:00:34.779  INFO 16908 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 11:00:34.857  INFO 16908 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 11:00:34.857  INFO 16908 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1225 ms
-2021-12-01 11:00:34.976  INFO 16908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 11:00:36.204  INFO 16908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 11:00:36.238  INFO 16908 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 11:00:36.276  INFO 16908 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 11:00:36.381  INFO 16908 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 11:00:36.507  INFO 16908 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 11:00:37.132  INFO 16908 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 11:00:37.139  INFO 16908 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 11:00:37.451  WARN 16908 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 11:00:37.655  WARN 16908 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 11:00:37.747  INFO 16908 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 11:00:37.777  INFO 16908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 11:00:37.784  INFO 16908 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 4.494 seconds (JVM running for 5.312)
-2021-12-01 11:03:45.783  INFO 16908 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 11:03:45.783  INFO 16908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 11:03:45.784  INFO 16908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 11:04:54.675  INFO 16908 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 11:04:54.702  INFO 16908 --- [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 11:04:54.704  INFO 16908 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 11:05:01.402  INFO 16908 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 11:20:36.398  INFO 24124 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 24124 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 11:20:36.399  INFO 24124 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 11:20:36.435  INFO 24124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 11:20:36.435  INFO 24124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 11:20:36.887  INFO 24124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 11:20:37.008  INFO 24124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 3 JPA repository interfaces.
-2021-12-01 11:20:37.480  INFO 24124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 11:20:37.495  INFO 24124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 11:20:37.495  INFO 24124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 11:20:37.592  INFO 24124 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 11:20:37.593  INFO 24124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1157 ms
-2021-12-01 11:20:37.737  INFO 24124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 11:20:39.023  INFO 24124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 11:20:39.066  INFO 24124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 11:20:39.111  INFO 24124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 11:20:39.232  INFO 24124 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 11:20:39.350  INFO 24124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 11:20:39.973  INFO 24124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 11:20:39.980  INFO 24124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 11:20:40.313  WARN 24124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 11:20:40.531  WARN 24124 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 11:20:40.640  INFO 24124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 11:20:40.670  INFO 24124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 11:20:40.679  INFO 24124 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 4.58 seconds (JVM running for 5.258)
-2021-12-01 11:30:19.238  INFO 24124 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 11:30:19.239  INFO 24124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 11:30:19.240  INFO 24124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 11:30:19.298  WARN 24124 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5e643a28 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 11:30:19.300  WARN 24124 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48cb051c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 11:30:19.301  WARN 24124 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3701d357 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 11:30:19.302  WARN 24124 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@72126102 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 11:30:19.303  WARN 24124 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@57c8ffc2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 11:32:17.345  INFO 24124 --- [RMI TCP Connection(21)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 11:32:17.373  INFO 24124 --- [RMI TCP Connection(21)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 11:32:17.375  INFO 24124 --- [RMI TCP Connection(21)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 11:32:21.159  INFO 24124 --- [RMI TCP Connection(21)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 11:33:15.858  INFO 11172 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 11172 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 11:33:15.859  INFO 11172 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 11:33:15.894  INFO 11172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 11:33:15.894  INFO 11172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 11:33:16.332  INFO 11172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 11:33:16.447  INFO 11172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 3 JPA repository interfaces.
-2021-12-01 11:33:16.884  INFO 11172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 11:33:16.896  INFO 11172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 11:33:16.897  INFO 11172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 11:33:16.970  INFO 11172 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 11:33:16.971  INFO 11172 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1077 ms
-2021-12-01 11:33:17.089  INFO 11172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 11:33:18.364  INFO 11172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 11:33:18.400  INFO 11172 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 11:33:18.441  INFO 11172 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 11:33:18.539  INFO 11172 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 11:33:18.636  INFO 11172 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 11:33:19.151  INFO 11172 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 11:33:19.158  INFO 11172 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 11:33:19.458  WARN 11172 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 11:33:19.629  WARN 11172 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 11:33:19.727  INFO 11172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 11:33:19.757  INFO 11172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 11:33:19.765  INFO 11172 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 4.173 seconds (JVM running for 4.827)
-2021-12-01 11:33:27.720  INFO 11172 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 11:33:27.721  INFO 11172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 11:33:27.722  INFO 11172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 14:09:44.707  INFO 11172 --- [RMI TCP Connection(166)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 14:09:44.834  INFO 11172 --- [RMI TCP Connection(166)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 14:09:44.844  INFO 11172 --- [RMI TCP Connection(166)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 14:09:45.375  INFO 11172 --- [RMI TCP Connection(166)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 15:58:06.644  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 4364 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 15:58:06.645  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 15:58:06.682  INFO 4364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 15:58:06.682  INFO 4364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 15:58:07.205  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 15:58:07.345  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 3 JPA repository interfaces.
-2021-12-01 15:58:07.799  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 15:58:07.814  INFO 4364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 15:58:07.814  INFO 4364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 15:58:07.898  INFO 4364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 15:58:07.898  INFO 4364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1216 ms
-2021-12-01 15:58:08.007  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 15:58:13.980  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 15:58:14.046  INFO 4364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 15:58:14.099  INFO 4364 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 15:58:14.238  INFO 4364 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 15:58:14.353  INFO 4364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 15:58:15.131  INFO 4364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 15:58:15.138  INFO 4364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 15:58:15.450  WARN 4364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 15:58:15.640  WARN 4364 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 15:58:15.755  INFO 4364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 15:58:15.784  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 15:58:15.791  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 9.432 seconds (JVM running for 10.076)
-2021-12-01 15:58:33.573  INFO 4364 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 15:58:33.573  INFO 4364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 15:58:33.574  INFO 4364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 16:34:48.318  WARN 4364 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36794477 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 16:34:48.320  WARN 4364 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@239b85cc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 16:34:48.321  WARN 4364 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@407cbdfc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 16:34:48.322  WARN 4364 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c5a1378 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 16:34:48.322  WARN 4364 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6fcefccf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 16:34:48.323  WARN 4364 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1004a11f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 17:55:16.792  INFO 4364 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 17:55:16.813  INFO 4364 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 17:55:16.817  INFO 4364 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 17:55:17.039  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 4364 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 17:55:17.039  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 17:55:17.167  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 17:55:17.175  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
-2021-12-01 17:55:17.289  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 17:55:17.290  INFO 4364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 17:55:17.290  INFO 4364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 17:55:17.321  INFO 4364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 17:55:17.321  INFO 4364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 280 ms
-2021-12-01 17:55:17.342  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2021-12-01 17:55:18.651  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2021-12-01 17:55:18.663  INFO 4364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 17:55:18.682  INFO 4364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 17:55:18.762  INFO 4364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 17:55:18.762  INFO 4364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 17:55:18.833  WARN 4364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 17:55:18.877  WARN 4364 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 17:55:18.899  INFO 4364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 17:55:18.906  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 17:55:18.909  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.9 seconds (JVM running for 7033.195)
-2021-12-01 17:55:18.910  INFO 4364 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:01:10.601  INFO 4364 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:01:10.603  INFO 4364 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2021-12-01 18:01:11.130  INFO 4364 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2021-12-01 18:01:11.182  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 4364 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:01:11.183  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:01:11.287  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:01:11.294  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:01:11.364  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:01:11.364  INFO 4364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:01:11.364  INFO 4364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:01:11.380  INFO 4364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:01:11.381  INFO 4364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 197 ms
-2021-12-01 18:01:11.403  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2021-12-01 18:01:12.404  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2021-12-01 18:01:12.407  INFO 4364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:01:12.411  INFO 4364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:01:12.437  INFO 4364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:01:12.437  INFO 4364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:01:12.504  WARN 4364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:01:12.544  WARN 4364 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:01:12.566  INFO 4364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:01:12.574  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:01:12.577  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.417 seconds (JVM running for 7386.862)
-2021-12-01 18:01:12.578  INFO 4364 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:07:04.589  INFO 4364 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:07:04.589  INFO 4364 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:07:04.590  INFO 4364 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 18:07:07.435  WARN 4364 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-2021-12-01 18:07:11.254  WARN 4364 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ba53407 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:07:11.255  WARN 4364 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b906db4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:07:11.255  WARN 4364 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1131b8ea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:07:11.256  WARN 4364 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5376a3c7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:07:11.257  WARN 4364 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@453e8ca5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:13:17.766  INFO 4364 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:13:17.767  INFO 4364 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2021-12-01 18:13:21.760  INFO 4364 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2021-12-01 18:13:21.829  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 4364 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:13:21.829  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:13:21.935  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:13:21.943  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:13:22.009  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:13:22.010  INFO 4364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:13:22.010  INFO 4364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:13:22.025  INFO 4364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:13:22.025  INFO 4364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
-2021-12-01 18:13:22.048  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2021-12-01 18:13:23.035  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2021-12-01 18:13:23.041  INFO 4364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:13:23.050  INFO 4364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:13:23.100  INFO 4364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:13:23.101  INFO 4364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:13:23.163  WARN 4364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:13:23.198  WARN 4364 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:13:23.219  INFO 4364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:13:23.226  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:13:23.229  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.429 seconds (JVM running for 8117.515)
-2021-12-01 18:13:23.230  INFO 4364 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:13:52.465  INFO 4364 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:13:52.466  INFO 4364 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2021-12-01 18:13:58.995  INFO 4364 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2021-12-01 18:13:59.083  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 4364 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:13:59.084  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:13:59.192  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:13:59.198  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:13:59.253  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:13:59.254  INFO 4364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:13:59.254  INFO 4364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:13:59.269  INFO 4364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:13:59.269  INFO 4364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 184 ms
-2021-12-01 18:13:59.289  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2021-12-01 18:14:00.296  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2021-12-01 18:14:00.299  INFO 4364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:14:00.302  INFO 4364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:14:00.326  INFO 4364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:14:00.326  INFO 4364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:14:00.383  WARN 4364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:14:00.418  WARN 4364 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:14:00.441  INFO 4364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:14:00.450  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:14:00.453  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.387 seconds (JVM running for 8154.739)
-2021-12-01 18:14:00.454  INFO 4364 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:14:05.228  INFO 4364 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:14:05.229  INFO 4364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:14:05.229  INFO 4364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-12-01 18:14:52.620  INFO 4364 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:14:52.621  INFO 4364 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2021-12-01 18:14:57.039  INFO 4364 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
-2021-12-01 18:14:57.085  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 4364 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:14:57.085  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:14:57.178  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:14:57.185  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:14:57.240  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:14:57.240  INFO 4364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:14:57.240  INFO 4364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:14:57.255  INFO 4364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:14:57.255  INFO 4364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 169 ms
-2021-12-01 18:14:57.275  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2021-12-01 18:14:58.294  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2021-12-01 18:14:58.296  INFO 4364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:14:58.301  INFO 4364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:14:58.325  INFO 4364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:14:58.326  INFO 4364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:14:58.385  WARN 4364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:14:58.414  WARN 4364 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:14:58.430  INFO 4364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:14:58.437  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:14:58.440  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.371 seconds (JVM running for 8212.725)
-2021-12-01 18:14:58.441  INFO 4364 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:15:03.944  INFO 4364 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:15:03.944  INFO 4364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:15:03.945  INFO 4364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 18:19:12.214  INFO 4364 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:19:12.214  INFO 4364 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2021-12-01 18:19:14.168  INFO 4364 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
-2021-12-01 18:19:14.241  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 4364 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:19:14.241  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:19:14.333  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:19:14.340  INFO 4364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:19:14.393  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:19:14.394  INFO 4364 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:19:14.394  INFO 4364 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:19:14.408  INFO 4364 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:19:14.408  INFO 4364 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 165 ms
-2021-12-01 18:19:14.426  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2021-12-01 18:19:15.650  INFO 4364 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
-2021-12-01 18:19:15.659  INFO 4364 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:19:15.675  INFO 4364 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:19:15.717  INFO 4364 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:19:15.717  INFO 4364 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:19:15.769  WARN 4364 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:19:15.798  WARN 4364 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:19:15.814  INFO 4364 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:19:15.820  INFO 4364 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:19:15.823  INFO 4364 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.599 seconds (JVM running for 8470.108)
-2021-12-01 18:19:15.824  INFO 4364 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:19:16.068  INFO 4364 --- [RMI TCP Connection(169)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 18:19:16.081  INFO 4364 --- [RMI TCP Connection(169)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:19:16.081  INFO 4364 --- [RMI TCP Connection(169)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
-2021-12-01 18:19:16.833  INFO 4364 --- [RMI TCP Connection(169)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
-2021-12-01 18:21:42.220  INFO 23360 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 23360 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:21:42.221  INFO 23360 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:21:42.251  INFO 23360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 18:21:42.251  INFO 23360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 18:21:42.649  INFO 23360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:21:42.761  INFO 23360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:21:43.167  INFO 23360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:21:43.176  INFO 23360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:21:43.176  INFO 23360 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:21:43.249  INFO 23360 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:21:43.250  INFO 23360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 999 ms
-2021-12-01 18:21:43.353  INFO 23360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 18:21:44.655  INFO 23360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 18:21:44.737  INFO 23360 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:21:44.784  INFO 23360 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 18:21:44.910  INFO 23360 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 18:21:45.009  INFO 23360 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:21:45.582  INFO 23360 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:21:45.589  INFO 23360 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:21:45.857  WARN 23360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:21:46.013  WARN 23360 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:21:46.108  INFO 23360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:21:46.134  INFO 23360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:21:46.141  INFO 23360 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 4.177 seconds (JVM running for 4.779)
-2021-12-01 18:22:00.946  INFO 23360 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 18:22:00.976  INFO 23360 --- [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:22:00.978  INFO 23360 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 18:22:02.909  INFO 23360 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 18:23:36.599  INFO 12276 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 12276 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:23:36.600  INFO 12276 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:23:36.631  INFO 12276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 18:23:36.631  INFO 12276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 18:23:37.014  INFO 12276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:23:37.120  INFO 12276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:23:37.498  INFO 12276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:23:37.506  INFO 12276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:23:37.506  INFO 12276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:23:37.588  INFO 12276 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:23:37.588  INFO 12276 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 957 ms
-2021-12-01 18:23:37.690  INFO 12276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 18:23:40.373  INFO 12276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 18:23:40.410  INFO 12276 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:23:40.446  INFO 12276 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 18:23:40.555  INFO 12276 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 18:23:40.646  INFO 12276 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:23:42.158  INFO 12276 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:23:42.167  INFO 12276 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:23:42.525  WARN 12276 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:23:42.740  WARN 12276 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:23:42.841  INFO 12276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:23:42.868  INFO 12276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:23:42.875  INFO 12276 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 6.53 seconds (JVM running for 7.11)
-2021-12-01 18:23:47.536  INFO 12276 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:23:47.537  INFO 12276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:23:47.538  INFO 12276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 18:24:00.366 ERROR 12276 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/APIMascotas] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "com.sv.modelos.Mascotas.getEstado()" is null] with root cause
-
-java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "com.sv.modelos.Mascotas.getEstado()" is null
-	at com.sv.controladores.MascotasController.ListaMisMascotas(MascotasController.java:81) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2021-12-01 18:25:16.150  INFO 12276 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 18:25:16.176  INFO 12276 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:25:16.178  INFO 12276 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 18:25:21.058  INFO 12276 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 18:27:53.375  INFO 14740 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 14740 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:27:53.376  INFO 14740 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:27:53.407  INFO 14740 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 18:27:53.407  INFO 14740 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 18:27:53.790  INFO 14740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:27:53.914  INFO 14740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:27:54.299  INFO 14740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:27:54.305  INFO 14740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:27:54.306  INFO 14740 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:27:54.370  INFO 14740 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:27:54.370  INFO 14740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 962 ms
-2021-12-01 18:27:54.465  INFO 14740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 18:27:55.753  INFO 14740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 18:27:55.831  INFO 14740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:27:55.863  INFO 14740 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 18:27:55.954  INFO 14740 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 18:27:56.036  INFO 14740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:27:56.540  INFO 14740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:27:56.546  INFO 14740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:27:56.835  WARN 14740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:27:56.991  WARN 14740 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:27:57.078  INFO 14740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:27:57.104  INFO 14740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:27:57.111  INFO 14740 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 3.995 seconds (JVM running for 4.561)
-2021-12-01 18:34:16.528  INFO 14740 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:34:16.528  INFO 14740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:34:16.529  INFO 14740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 18:34:16.609  WARN 14740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b2add9c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:34:16.611  WARN 14740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a3d5131 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:34:16.611  WARN 14740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4786add7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:34:16.612  WARN 14740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3cd94709 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 18:35:32.134  INFO 14740 --- [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-01 18:35:32.164  INFO 14740 --- [RMI TCP Connection(18)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:35:32.167  INFO 14740 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 18:35:39.645  INFO 14740 --- [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 18:36:22.696  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:36:22.697  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:36:22.726  INFO 21476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-01 18:36:22.726  INFO 21476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-01 18:36:23.110  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:36:23.216  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:36:23.590  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:36:23.597  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:36:23.597  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:36:23.660  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:36:23.660  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 934 ms
-2021-12-01 18:36:23.753  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-01 18:36:25.161  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-01 18:36:25.193  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:36:25.225  INFO 21476 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-01 18:36:25.312  INFO 21476 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-01 18:36:25.397  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:36:25.874  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:36:25.880  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:36:26.156  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:36:26.344  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:36:26.441  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:36:26.468  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:36:26.476  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 4.02 seconds (JVM running for 4.584)
-2021-12-01 18:36:31.668  INFO 21476 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:36:31.668  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:36:31.669  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 18:36:53.324  INFO 21476 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:36:53.327  INFO 21476 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-01 18:37:00.453  INFO 21476 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-01 18:37:00.553  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:37:00.553  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:37:00.658  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:37:00.666  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:37:00.727  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:37:00.727  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:37:00.727  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:37:00.743  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:37:00.743  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
-2021-12-01 18:37:00.762  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2021-12-01 18:37:01.771  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2021-12-01 18:37:01.781  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:37:01.795  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:37:01.841  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:37:01.842  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:37:01.898  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:37:01.931  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:37:01.949  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:37:01.956  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:37:01.959  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.426 seconds (JVM running for 40.068)
-2021-12-01 18:37:01.961  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:37:18.633  INFO 21476 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:37:18.634  INFO 21476 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2021-12-01 18:37:19.266  INFO 21476 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2021-12-01 18:37:19.317  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:37:19.317  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:37:19.410  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:37:19.419  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:37:19.475  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:37:19.476  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:37:19.476  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:37:19.491  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:37:19.492  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
-2021-12-01 18:37:19.511  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2021-12-01 18:37:20.523  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2021-12-01 18:37:20.529  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:37:20.539  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:37:20.582  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:37:20.582  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:37:20.638  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:37:20.669  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:37:20.685  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:37:20.691  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:37:20.695  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.399 seconds (JVM running for 58.804)
-2021-12-01 18:37:20.696  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:37:23.630  INFO 21476 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:37:23.630  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:37:23.631  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 18:42:01.925  WARN 21476 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2021-12-01 18:43:02.349  INFO 21476 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:43:02.351  INFO 21476 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2021-12-01 18:43:03.123  INFO 21476 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2021-12-01 18:43:03.212  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 18:43:03.212  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 18:43:03.311  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 18:43:03.318  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 18:43:03.381  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 18:43:03.382  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 18:43:03.382  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 18:43:03.396  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 18:43:03.396  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 183 ms
-2021-12-01 18:43:03.416  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2021-12-01 18:43:04.395  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2021-12-01 18:43:04.400  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 18:43:04.419  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 18:43:04.468  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 18:43:04.468  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 18:43:04.530  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 18:43:04.570  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 18:43:04.591  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 18:43:04.598  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 18:43:04.602  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.417 seconds (JVM running for 402.711)
-2021-12-01 18:43:04.603  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 18:43:26.469  INFO 21476 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 18:43:26.469  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 18:43:26.470  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 19:15:15.843  WARN 21476 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19569941 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:15:15.845  WARN 21476 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@336b1e18 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:15:15.846  WARN 21476 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@419caf2c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:15:15.848  WARN 21476 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6cadbacf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:15:15.849  WARN 21476 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@60f67573 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:24:33.560  WARN 21476 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34eeb66 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:24:33.561  WARN 21476 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@426aed35 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:24:33.562  WARN 21476 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3cf4273d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:24:33.563  WARN 21476 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4895ee1e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:24:33.564  WARN 21476 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66c72d72 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:24:33.565  WARN 21476 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73d167da (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:24:33.566  WARN 21476 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-4 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6e816b52 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-01 19:27:05.068  INFO 21476 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:27:05.070  INFO 21476 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2021-12-01 19:27:06.361  INFO 21476 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2021-12-01 19:27:06.448  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 19:27:06.448  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 19:27:06.552  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 19:27:06.559  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 19:27:06.628  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 19:27:06.628  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 19:27:06.629  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 19:27:06.655  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 19:27:06.655  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 205 ms
-2021-12-01 19:27:06.675  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2021-12-01 19:27:08.234  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2021-12-01 19:27:08.237  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 19:27:08.240  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 19:27:08.303  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 19:27:08.303  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:27:08.375  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 19:27:08.411  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 19:27:08.432  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 19:27:08.439  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 19:27:08.442  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 2.015 seconds (JVM running for 3046.551)
-2021-12-01 19:27:08.443  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 19:27:27.637  INFO 21476 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 19:27:27.637  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 19:27:27.638  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 19:28:00.807  INFO 21476 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:28:00.808  INFO 21476 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2021-12-01 19:28:07.252  INFO 21476 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
-2021-12-01 19:28:07.301  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 19:28:07.301  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 19:28:07.392  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 19:28:07.400  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 19:28:07.454  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 19:28:07.454  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 19:28:07.454  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 19:28:07.468  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 19:28:07.468  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 165 ms
-2021-12-01 19:28:07.487  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2021-12-01 19:28:08.806  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2021-12-01 19:28:08.817  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 19:28:08.835  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 19:28:08.902  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 19:28:08.902  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:28:08.954  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 19:28:08.983  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 19:28:09.014  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 19:28:09.031  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 19:28:09.041  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.758 seconds (JVM running for 3107.15)
-2021-12-01 19:28:09.046  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 19:28:09.512  INFO 21476 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 19:28:09.512  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 19:28:09.513  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 19:28:43.979  INFO 21476 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:28:43.979  INFO 21476 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2021-12-01 19:28:45.668  INFO 21476 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
-2021-12-01 19:28:45.758  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 19:28:45.759  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 19:28:45.868  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 19:28:45.877  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
-2021-12-01 19:28:45.947  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 19:28:45.948  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 19:28:45.948  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 19:28:45.966  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 19:28:45.966  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 205 ms
-2021-12-01 19:28:45.985  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2021-12-01 19:28:47.165  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
-2021-12-01 19:28:47.174  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 19:28:47.189  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 19:28:47.253  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 19:28:47.253  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:28:47.308  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 19:28:47.337  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 19:28:47.353  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 19:28:47.360  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 19:28:47.363  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.63 seconds (JVM running for 3145.471)
-2021-12-01 19:28:47.364  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 19:28:49.775  INFO 21476 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 19:28:49.775  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 19:28:49.776  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-01 19:29:23.284  INFO 21476 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:29:23.285  INFO 21476 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
-2021-12-01 19:29:23.774  INFO 21476 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
-2021-12-01 19:29:23.829  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 19:29:23.829  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 19:29:23.922  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 19:29:23.929  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 19:29:23.982  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 19:29:23.983  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 19:29:23.983  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 19:29:23.998  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 19:29:23.998  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 167 ms
-2021-12-01 19:29:24.015  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2021-12-01 19:29:25.088  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
-2021-12-01 19:29:25.097  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 19:29:25.113  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 19:29:25.164  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 19:29:25.164  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:29:25.216  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 19:29:25.244  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 19:29:25.269  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 19:29:25.280  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 19:29:25.283  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.473 seconds (JVM running for 3183.392)
-2021-12-01 19:29:25.284  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 19:29:38.956  INFO 21476 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:29:38.956  INFO 21476 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
-2021-12-01 19:29:40.498  INFO 21476 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
-2021-12-01 19:29:40.586  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 19:29:40.586  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 19:29:40.673  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 19:29:40.680  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 19:29:40.733  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 19:29:40.734  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 19:29:40.734  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 19:29:40.749  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 19:29:40.749  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 162 ms
-2021-12-01 19:29:40.766  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
-2021-12-01 19:29:42.177  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
-2021-12-01 19:29:42.184  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 19:29:42.198  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 19:29:42.224  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 19:29:42.224  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:29:42.285  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 19:29:42.318  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 19:29:42.335  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 19:29:42.342  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 19:29:42.346  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.78 seconds (JVM running for 3200.454)
-2021-12-01 19:29:42.347  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 19:29:47.913  INFO 21476 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:29:47.913  INFO 21476 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
-2021-12-01 19:29:48.683  INFO 21476 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
-2021-12-01 19:29:48.764  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 19:29:48.764  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 19:29:48.907  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 19:29:48.914  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 19:29:48.967  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 19:29:48.967  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 19:29:48.967  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 19:29:48.983  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 19:29:48.983  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 217 ms
-2021-12-01 19:29:49.000  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
-2021-12-01 19:29:50.746  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
-2021-12-01 19:29:50.750  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 19:29:50.754  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 19:29:50.772  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 19:29:50.772  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:29:50.826  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 19:29:50.857  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 19:29:50.872  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 19:29:50.879  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 19:29:50.883  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 2.135 seconds (JVM running for 3208.991)
-2021-12-01 19:29:50.883  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-01 19:31:27.577  INFO 21476 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-01 19:31:27.577  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-01 19:31:27.578  INFO 21476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-12-01 19:31:44.768  INFO 21476 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:31:44.768  INFO 21476 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
-2021-12-01 19:31:53.818  INFO 21476 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
-2021-12-01 19:31:53.872  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 21476 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-01 19:31:53.872  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-01 19:31:53.972  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-01 19:31:53.979  INFO 21476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
-2021-12-01 19:31:54.043  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-01 19:31:54.043  INFO 21476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-01 19:31:54.043  INFO 21476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-01 19:31:54.059  INFO 21476 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-01 19:31:54.059  INFO 21476 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 185 ms
-2021-12-01 19:31:54.078  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
-2021-12-01 19:31:55.098  INFO 21476 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
-2021-12-01 19:31:55.100  INFO 21476 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-01 19:31:55.108  INFO 21476 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-01 19:31:55.141  INFO 21476 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-01 19:31:55.142  INFO 21476 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-01 19:31:55.201  WARN 21476 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-01 19:31:55.238  WARN 21476 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-01 19:31:55.267  INFO 21476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-01 19:31:55.282  INFO 21476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-01 19:31:55.285  INFO 21476 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 1.432 seconds (JVM running for 3333.393)
-2021-12-01 19:31:55.287  INFO 21476 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-02 08:09:47.776  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 24872 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
+2021-12-02 08:09:47.780  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
+2021-12-02 08:09:47.825  INFO 24872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-02 08:09:47.826  INFO 24872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-02 08:09:48.409  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-02 08:09:48.563  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 3 JPA repository interfaces.
+2021-12-02 08:09:49.068  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-02 08:09:49.076  INFO 24872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-02 08:09:49.076  INFO 24872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-12-02 08:09:49.168  INFO 24872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
+2021-12-02 08:09:49.168  INFO 24872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1342 ms
+2021-12-02 08:09:49.307  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-02 08:09:54.206  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-02 08:09:54.246  INFO 24872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-02 08:09:54.300  INFO 24872 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-02 08:09:54.446  INFO 24872 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-02 08:09:54.586  INFO 24872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-02 08:09:55.215  INFO 24872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-02 08:09:55.222  INFO 24872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-02 08:09:55.560  WARN 24872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-02 08:09:55.797  WARN 24872 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-02 08:09:55.936  INFO 24872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-02 08:09:55.970  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
+2021-12-02 08:09:55.979  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 8.562 seconds (JVM running for 9.492)
+2021-12-02 08:10:01.536  INFO 24872 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-02 08:10:01.537  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-02 08:10:01.538  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-02 08:18:07.320  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a59fe7f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 08:18:07.322  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56a62220 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 08:18:07.323  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2379948d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 08:18:07.324  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f73d21d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 08:18:07.325  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f79f22c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 08:21:06.900  INFO 24872 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-02 08:21:06.902  INFO 24872 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-02 08:21:13.018  INFO 24872 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-02 08:21:13.075  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 24872 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
+2021-12-02 08:21:13.076  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
+2021-12-02 08:21:13.202  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-02 08:21:13.211  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2021-12-02 08:21:13.291  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-02 08:21:13.292  INFO 24872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-02 08:21:13.292  INFO 24872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-12-02 08:21:13.309  INFO 24872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
+2021-12-02 08:21:13.309  INFO 24872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
+2021-12-02 08:21:13.332  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-12-02 08:21:14.887  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-12-02 08:21:14.891  INFO 24872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-02 08:21:14.897  INFO 24872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-02 08:21:14.929  INFO 24872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-02 08:21:14.930  INFO 24872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-02 08:21:15.010  WARN 24872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-02 08:21:15.058  WARN 24872 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-02 08:21:15.081  INFO 24872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-02 08:21:15.089  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
+2021-12-02 08:21:15.094  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 2.044 seconds (JVM running for 688.607)
+2021-12-02 08:21:15.096  INFO 24872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-02 08:43:44.642  INFO 24872 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-02 08:43:44.643  INFO 24872 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-12-02 08:43:44.647  INFO 24872 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-12-02 08:43:44.704  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 24872 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
+2021-12-02 08:43:44.704  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
+2021-12-02 08:43:44.812  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-02 08:43:44.820  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2021-12-02 08:43:44.891  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-02 08:43:44.892  INFO 24872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-02 08:43:44.892  INFO 24872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-12-02 08:43:44.908  INFO 24872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
+2021-12-02 08:43:44.908  INFO 24872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 202 ms
+2021-12-02 08:43:44.930  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-12-02 08:43:46.569  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-12-02 08:43:46.584  INFO 24872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-02 08:43:46.598  INFO 24872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-02 08:43:46.647  INFO 24872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-02 08:43:46.647  INFO 24872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-02 08:43:46.716  WARN 24872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-02 08:43:46.757  WARN 24872 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-02 08:43:46.778  INFO 24872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-02 08:43:46.785  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
+2021-12-02 08:43:46.789  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 2.107 seconds (JVM running for 2040.302)
+2021-12-02 08:43:46.790  INFO 24872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-02 08:45:38.468  INFO 24872 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-02 08:45:38.468  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-02 08:45:38.469  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-02 09:01:31.406  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6755d34b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.407  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11c7fc4b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.408  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78635fed (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.409  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@31651421 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.410  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6e825be0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.411  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4089c7df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.412  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22777414 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.413  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b2ab867 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.413  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@478bb9b9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:31.414  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49b229a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-02 09:01:41.914  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-12-02 09:01:41.928  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-02 09:01:41.928  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-12-02 09:01:43.446  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

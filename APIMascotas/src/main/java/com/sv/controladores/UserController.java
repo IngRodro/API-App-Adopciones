@@ -1,7 +1,7 @@
 package com.sv.controladores;
 
 import com.sv.modelos.Users;
-import com.sv.modelos.UsersSesion;
+import com.sv.modelos.UsersResponse;
 import com.sv.repositorio.InterfaceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,10 +26,10 @@ public class UserController {
     }
     
     @PostMapping("/inicio")
-    public UsersSesion acceso(@RequestBody Users us){
+    public UsersResponse acceso(@RequestBody Users us){
     	
     	
-    	UsersSesion user = new UsersSesion();
+    	UsersResponse user = new UsersResponse();
     	user.setUsername(us.getUsername());
     	user.setPassword(us.getPassword());
     	List<Users> usuarios = (List<Users>) interfaceUser.findAll();
@@ -55,8 +55,23 @@ public class UserController {
     }
     
     @PostMapping("/save")
-    public void SaveUser(@RequestBody Users us) {
-    	interfaceUser.save(us);
+    public boolean SaveUser(@RequestBody Users us) {
+    	boolean verificacion = false;
+    	
+    	List<Users> listauser = (List<Users>) interfaceUser.findAll();
+    	for(int i =0; i<listauser.size(); i++) {
+    		if(us.getUsername().equals(listauser.get(i).getUsername())) {
+    			verificacion = true;
+    			break;
+    		}    		
+    	}
+    	
+    	if(verificacion == false) {
+    		interfaceUser.save(us);
+    		return false;
+    	}else {
+    		return true;
+    	}
     }
     
     @PostMapping("/update")

@@ -6,6 +6,7 @@ public class AdopcionRequest {
 	private Mascotas idMascota;
 	private Users idUsuarioAdopta;
 	private String estado;
+	
 	public Integer getIdAdopcion() {
 		return idAdopcion;
 	}
