@@ -58,4 +58,34 @@ public class UserController {
     public void SaveUser(@RequestBody Users us) {
     	interfaceUser.save(us);
     }
+    
+    @PostMapping("/update")
+    public void UpdateUser(@RequestBody Users us) {
+    	
+    	Users user = new Users();
+    	List<Users> lista =(List<Users>) interfaceUser.findAll();
+    	for(int i=0; i<lista.size(); i++){
+    		user = lista.get(i);
+    	if(user.getIduser() == us.getIduser()) 
+    	{
+    		if(us.getTelefono().equals("")) {
+    			user.setDepartamento(us.getDepartamento());
+    			user.setMunicipio(us.getMunicipio());
+    			interfaceUser.save(user);
+    		}else {
+    			if(us.getDepartamento().equals("Seleccione un Departamento") && us.getMunicipio().equals("Seleccione un Municipio")) {
+    				user.setTelefono(us.getTelefono());
+        			interfaceUser.save(user);
+    			}else {
+    				user.setDepartamento(us.getDepartamento());
+        			user.setMunicipio(us.getMunicipio());
+    				user.setTelefono(us.getTelefono());
+        			interfaceUser.save(user);
+    			}
+    		}
+    	}
+    	
+    	}
+    	
+    }
 }

@@ -72,7 +72,11 @@ public class AdopcionController {
 		
 		for(int i=0; i<listaAdopciones.size(); i++) {
 			Adopcion adopcion = listaAdopciones.get(i);
-			
+			String estado = "";
+			if(adopcion.getEstado() !=null) {
+				estado = adopcion.getEstado();
+			}
+			if(!estado.equals("Adopcion Completa")) {
 			AdopcionResponse adopcionResponse = new AdopcionResponse();
 			adopcionResponse.setEstado(adopcion.getEstado());
 			adopcionResponse.setIdadopcion(adopcion.getIdAdopcion());
@@ -95,6 +99,7 @@ public class AdopcionController {
 			
 			adopcionResponse.setIdMascota(mascotaResponse);
 			listaAdopcionesResponse.add(adopcionResponse);
+			}
 		}
 		
 		return listaAdopcionesResponse;
@@ -102,7 +107,7 @@ public class AdopcionController {
 		
 	}
 	
-	@PostMapping("/misMascotasAdopciones")
+	/*@PostMapping("/misMascotasAdopciones")
 	public List<AdopcionResponse> misMascotasAdoptadas(@RequestBody Users user) {
 		
 		List<Adopcion> listaAdopciones = (List<Adopcion>) interfaceAdopcion.findAll();
@@ -110,8 +115,11 @@ public class AdopcionController {
 		
 		for(int i=0; i<listaAdopciones.size(); i++) {
 			Adopcion adopcion = listaAdopciones.get(i);
-			
-			if(adopcion.getIdMascota().getIduser().getIduser() == user.getIduser()) {
+			String estado = "";
+			if(adopcion.getEstado() !=null) {
+				estado = adopcion.getEstado();
+			}
+			if(adopcion.getIdMascota().getIduser().getIduser() == user.getIduser() && !estado.equals("Adopcion Completa")) {
 				AdopcionResponse adopcionResponse = new AdopcionResponse();
 				adopcionResponse.setEstado(adopcion.getEstado());
 				adopcionResponse.setIdadopcion(adopcion.getIdAdopcion());
@@ -141,7 +149,7 @@ public class AdopcionController {
 		
 		
 	}
-	
+	*/
 	@PutMapping("/adopcionfinalizada/{id}")
 	public boolean Finish(@PathVariable("id") Integer idAdopcion){
 		try {

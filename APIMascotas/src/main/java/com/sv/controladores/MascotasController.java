@@ -14,6 +14,8 @@ import com.sv.modelos.Mascotas;
 import com.sv.modelos.Users;
 import com.sv.repositorio.InterfaceAdopcion;
 import com.sv.repositorio.InterfaceMascota;
+import com.sv.repositorio.InterfaceUser;
+
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.aspectj.weaver.ast.Var;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,8 @@ public class MascotasController {
 	private InterfaceMascota interfaceMascota;
 	@Autowired
 	private InterfaceAdopcion interfaceAdopcion;
+	@Autowired
+	private InterfaceUser interfaceUser;
 	
 	@GetMapping
 	public List<Mascotas> list(){
@@ -74,7 +78,11 @@ public class MascotasController {
 			MascotasResponse mascotasResponse = new MascotasResponse();
 			Mascotas mascotas = new Mascotas();
 			mascotas = listaMascotas.get(i);
-			if(mascotas.getIduser().getIduser() == user.getIduser()) {
+			String estado = "";
+			if(mascotas.getEstado() !=null) {
+				estado = mascotas.getEstado();
+			}
+			if(mascotas.getIduser().getIduser() == user.getIduser() && !estado.equals("Adoptado")) {
 				List<Adopcion> listaAdopciones = interfaceAdopcion.findByIdMascota(mascotas);
 
 				System.out.println(listaAdopciones.size());
@@ -112,11 +120,19 @@ public class MascotasController {
 	public List<MascotasResponse> ListaMascotas(@RequestBody Users user) {
 		List<Mascotas> listaMascotas = (List<Mascotas>) interfaceMascota.findAll();
 		List<MascotasResponse> listamascotasRequest = new ArrayList<MascotasResponse>();
+		
+		List<Users> lista =(List<Users>) interfaceUser.findAll();
+    	for(int i=0; i<lista.size(); i++){
+    		if(lista.get(i).getIduser() == user.getIduser()) {
+    			user.setMunicipio(lista.get(i).getMunicipio());
+    		}
+    		
+    	}
 		for (int i = 0; i < listaMascotas.size(); i++) {
 			MascotasResponse mascotasResponse = new MascotasResponse();
 			Mascotas mascotas = new Mascotas();
 			mascotas = listaMascotas.get(i);
-			if(mascotas.getEstado() == null && mascotas.getIduser().getIduser() != user.getIduser()) {
+			if(mascotas.getEstado() == null && mascotas.getIduser().getIduser() != user.getIduser() && mascotas.getIduser().getMunicipio() == user.getMunicipio()) {
 				mascotasResponse.setIdmascota(mascotas.getIdmascota());
 				mascotasResponse.setNombre(mascotas.getNombre());
 				mascotasResponse.setEdad(mascotas.getEdad());
