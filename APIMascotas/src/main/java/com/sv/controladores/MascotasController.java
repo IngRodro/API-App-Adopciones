@@ -128,11 +128,12 @@ public class MascotasController {
     		}
     		
     	}
+    	
 		for (int i = 0; i < listaMascotas.size(); i++) {
 			MascotasResponse mascotasResponse = new MascotasResponse();
 			Mascotas mascotas = new Mascotas();
 			mascotas = listaMascotas.get(i);
-			if(mascotas.getEstado() == null && mascotas.getIduser().getIduser() != user.getIduser() && mascotas.getIduser().getMunicipio() == user.getMunicipio()) {
+			if(mascotas.getEstado() == null && mascotas.getIduser().getIduser() != user.getIduser() && mascotas.getIduser().getMunicipio().equals(user.getMunicipio())) {
 				mascotasResponse.setIdmascota(mascotas.getIdmascota());
 				mascotasResponse.setNombre(mascotas.getNombre());
 				mascotasResponse.setEdad(mascotas.getEdad());
