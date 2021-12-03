@@ -56,8 +56,7 @@ public class MascotasController {
 			StringBuilder builder = new StringBuilder();
 			builder.append("src/main/resources/static/images/");
 			//Nombre de la imagen
-			Date date = new Date();
-			builder.append(mascotasRequest.getNombre() + "_" + mascotasRequest.getEdad() + "_"+ mascotasRequest.getIduser().getIduser() + date + ".jpeg");
+			builder.append(mascotasRequest.getNombre() + "_" + mascotasRequest.getEdad() + "_"+ mascotasRequest.getIduser().getIduser() + ".jpeg");
 
 			mascota.setUrlfoto(builder.toString());
 			//Asignacion del arreglo de bits de la imagen

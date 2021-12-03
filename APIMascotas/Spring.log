@@ -1,97 +1,264 @@
-2021-12-02 08:09:47.776  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 24872 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-02 08:09:47.780  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-02 08:09:47.825  INFO 24872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-12-02 08:09:47.826  INFO 24872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-12-02 08:09:48.409  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-02 08:09:48.563  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 3 JPA repository interfaces.
-2021-12-02 08:09:49.068  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-02 08:09:49.076  INFO 24872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-02 08:09:49.076  INFO 24872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 08:09:49.168  INFO 24872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-02 08:09:49.168  INFO 24872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1342 ms
-2021-12-02 08:09:49.307  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-02 08:09:54.206  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-12-02 08:09:54.246  INFO 24872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-02 08:09:54.300  INFO 24872 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-12-02 08:09:54.446  INFO 24872 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-12-02 08:09:54.586  INFO 24872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-02 08:09:55.215  INFO 24872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-02 08:09:55.222  INFO 24872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-02 08:09:55.560  WARN 24872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-02 08:09:55.797  WARN 24872 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-02 08:09:55.936  INFO 24872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-02 08:09:55.970  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-02 08:09:55.979  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 8.562 seconds (JVM running for 9.492)
-2021-12-02 08:10:01.536  INFO 24872 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 08:10:01.537  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-02 08:10:01.538  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-02 08:18:07.320  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a59fe7f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 08:18:07.322  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56a62220 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 08:18:07.323  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2379948d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 08:18:07.324  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f73d21d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 08:18:07.325  WARN 24872 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f79f22c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 08:21:06.900  INFO 24872 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-02 08:21:06.902  INFO 24872 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-02 08:21:13.018  INFO 24872 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-12-02 08:21:13.075  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 24872 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-02 08:21:13.076  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-02 08:21:13.202  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-02 08:21:13.211  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
-2021-12-02 08:21:13.291  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-02 08:21:13.292  INFO 24872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-02 08:21:13.292  INFO 24872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 08:21:13.309  INFO 24872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-02 08:21:13.309  INFO 24872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
-2021-12-02 08:21:13.332  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2021-12-02 08:21:14.887  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2021-12-02 08:21:14.891  INFO 24872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-02 08:21:14.897  INFO 24872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-02 08:21:14.929  INFO 24872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-02 08:21:14.930  INFO 24872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-02 08:21:15.010  WARN 24872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-02 08:21:15.058  WARN 24872 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-02 08:21:15.081  INFO 24872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-02 08:21:15.089  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-02 08:21:15.094  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 2.044 seconds (JVM running for 688.607)
-2021-12-02 08:21:15.096  INFO 24872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-02 08:43:44.642  INFO 24872 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-02 08:43:44.643  INFO 24872 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2021-12-02 08:43:44.647  INFO 24872 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2021-12-02 08:43:44.704  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 24872 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
-2021-12-02 08:43:44.704  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
-2021-12-02 08:43:44.812  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-12-02 08:43:44.820  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
-2021-12-02 08:43:44.891  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-02 08:43:44.892  INFO 24872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-02 08:43:44.892  INFO 24872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 08:43:44.908  INFO 24872 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
-2021-12-02 08:43:44.908  INFO 24872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 202 ms
-2021-12-02 08:43:44.930  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2021-12-02 08:43:46.569  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2021-12-02 08:43:46.584  INFO 24872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-12-02 08:43:46.598  INFO 24872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-12-02 08:43:46.647  INFO 24872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-12-02 08:43:46.647  INFO 24872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-12-02 08:43:46.716  WARN 24872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-12-02 08:43:46.757  WARN 24872 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-12-02 08:43:46.778  INFO 24872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-12-02 08:43:46.785  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
-2021-12-02 08:43:46.789  INFO 24872 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 2.107 seconds (JVM running for 2040.302)
-2021-12-02 08:43:46.790  INFO 24872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-12-02 08:45:38.468  INFO 24872 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 08:45:38.468  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-02 08:45:38.469  INFO 24872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-12-02 09:01:31.406  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6755d34b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.407  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11c7fc4b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.408  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78635fed (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.409  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@31651421 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.410  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6e825be0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.411  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4089c7df (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.412  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22777414 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.413  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b2ab867 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.413  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@478bb9b9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:31.414  WARN 24872 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-3 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49b229a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021-12-02 09:01:41.914  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-12-02 09:01:41.928  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-02 09:01:41.928  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2021-12-02 09:01:43.446  INFO 24872 --- [RMI TCP Connection(71)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-12-03 09:58:17.154  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 14676 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
+2021-12-03 09:58:17.158  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
+2021-12-03 09:58:17.212  INFO 14676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-03 09:58:17.213  INFO 14676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-03 09:58:17.895  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-03 09:58:18.052  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 3 JPA repository interfaces.
+2021-12-03 09:58:18.624  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-03 09:58:18.634  INFO 14676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-03 09:58:18.634  INFO 14676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-12-03 09:58:18.736  INFO 14676 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
+2021-12-03 09:58:18.737  INFO 14676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1524 ms
+2021-12-03 09:58:18.883  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-03 09:58:20.499  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-03 09:58:20.541  INFO 14676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-03 09:58:20.599  INFO 14676 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-03 09:58:20.748  INFO 14676 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-03 09:58:20.876  INFO 14676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-03 09:58:21.479  INFO 14676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-03 09:58:21.485  INFO 14676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 09:58:21.827  WARN 14676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-03 09:58:22.056  WARN 14676 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-03 09:58:22.252  INFO 14676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-03 09:58:22.299  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
+2021-12-03 09:58:22.307  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 5.537 seconds (JVM running for 6.535)
+2021-12-03 09:58:46.855  INFO 14676 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-03 09:58:46.855  INFO 14676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-03 09:58:46.856  INFO 14676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-03 10:17:32.021  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f0c9a70 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.023  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@52891b3a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.024  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@494dc401 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.025  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11b220a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.027  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@442a3c0a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.028  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5ee0bf7e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.029  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@792a156f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.030  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@791ddd82 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.031  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6c4274c7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:17:32.032  WARN 14676 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37023d7e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:26:24.439  WARN 14676 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@296dfc57 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:26:24.440  WARN 14676 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d8f6fcc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:26:24.441  WARN 14676 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5dea3cea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:26:24.442  WARN 14676 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ba3ec44 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:26:24.442  WARN 14676 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4006ebfc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-03 10:27:13.291  INFO 14676 --- [http-nio-8080-exec-5] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x0310xce0xdf.80xc4S0x970x820xa10x150x960x9e:0x980xd80x1aB0x8c0xb00x07S0xc3t0xc8c0xd30xfe0x08h+0x7f ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:269) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2021-12-03 10:27:28.346  WARN 14676 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-12-03 10:32:26.296 ERROR 14676 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/APIMascotas] threw exception [Request processing failed; nested exception is java.nio.file.InvalidPathException: Illegal char <:> at index 53: src/main/resources/static/images/Bob_0_6Fri Dec 03 10:32:26 CST 2021.jpeg] with root cause
+
+java.nio.file.InvalidPathException: Illegal char <:> at index 53: src/main/resources/static/images/Bob_0_6Fri Dec 03 10:32:26 CST 2021.jpeg
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182) ~[na:na]
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153) ~[na:na]
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77) ~[na:na]
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92) ~[na:na]
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:232) ~[na:na]
+	at java.base/java.nio.file.Path.of(Path.java:147) ~[na:na]
+	at java.base/java.nio.file.Paths.get(Paths.java:69) ~[na:na]
+	at com.sv.controladores.MascotasController.uploadFile(MascotasController.java:66) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2021-12-03 10:33:22.558  INFO 14676 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 10:33:22.561  INFO 14676 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-03 10:33:26.518  INFO 14676 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-03 10:33:26.588  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 14676 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
+2021-12-03 10:33:26.589  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
+2021-12-03 10:33:26.723  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-03 10:33:26.733  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2021-12-03 10:33:26.839  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-03 10:33:26.840  INFO 14676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-03 10:33:26.840  INFO 14676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-12-03 10:33:26.858  INFO 14676 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
+2021-12-03 10:33:26.858  INFO 14676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 267 ms
+2021-12-03 10:33:26.887  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-12-03 10:33:31.546  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-12-03 10:33:31.550  INFO 14676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-03 10:33:31.556  INFO 14676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-03 10:33:31.592  INFO 14676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-03 10:33:31.592  INFO 14676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 10:33:31.688  WARN 14676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-03 10:33:31.750  WARN 14676 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-03 10:33:31.782  INFO 14676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-03 10:33:31.796  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
+2021-12-03 10:33:31.802  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 5.239 seconds (JVM running for 2116.03)
+2021-12-03 10:33:31.804  INFO 14676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-03 10:33:33.236  INFO 14676 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 10:33:33.236  INFO 14676 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-12-03 10:33:34.721  INFO 14676 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-12-03 10:33:34.784  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 14676 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
+2021-12-03 10:33:34.784  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
+2021-12-03 10:33:34.917  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-03 10:33:34.926  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2021-12-03 10:33:35.005  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-03 10:33:35.006  INFO 14676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-03 10:33:35.006  INFO 14676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-12-03 10:33:35.026  INFO 14676 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
+2021-12-03 10:33:35.026  INFO 14676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 241 ms
+2021-12-03 10:33:35.052  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-12-03 10:33:38.237  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-12-03 10:33:38.239  INFO 14676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-03 10:33:38.243  INFO 14676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-03 10:33:38.272  INFO 14676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-03 10:33:38.272  INFO 14676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 10:33:38.343  WARN 14676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-03 10:33:38.385  WARN 14676 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-03 10:33:38.406  INFO 14676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-03 10:33:38.414  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
+2021-12-03 10:33:38.419  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 3.66 seconds (JVM running for 2122.647)
+2021-12-03 10:33:38.420  INFO 14676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-03 10:33:52.449  INFO 14676 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-03 10:33:52.449  INFO 14676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-03 10:33:52.449  INFO 14676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-12-03 10:34:19.794 ERROR 14676 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/APIMascotas] threw exception [Request processing failed; nested exception is java.nio.file.InvalidPathException: Illegal char <:> at index 53: src/main/resources/static/images/Bob_0_6Fri Dec 03 10:34:19 CST 2021.jpeg] with root cause
+
+java.nio.file.InvalidPathException: Illegal char <:> at index 53: src/main/resources/static/images/Bob_0_6Fri Dec 03 10:34:19 CST 2021.jpeg
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182) ~[na:na]
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153) ~[na:na]
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77) ~[na:na]
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92) ~[na:na]
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:232) ~[na:na]
+	at java.base/java.nio.file.Path.of(Path.java:147) ~[na:na]
+	at java.base/java.nio.file.Paths.get(Paths.java:69) ~[na:na]
+	at com.sv.controladores.MascotasController.uploadFile(MascotasController.java:66) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2021-12-03 10:34:36.483  INFO 14676 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 10:34:36.484  INFO 14676 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-12-03 10:34:43.774  INFO 14676 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-12-03 10:34:43.837  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Starting ApiMascotasApplication using Java 17 on DESKTOP-IKHG5VJ with PID 14676 (C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas\target\classes started by r0dr0 in C:\Users\r0dr0\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\APIMascotas)
+2021-12-03 10:34:43.837  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : No active profile set, falling back to default profiles: default
+2021-12-03 10:34:43.954  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-03 10:34:43.961  INFO 14676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2021-12-03 10:34:44.035  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-03 10:34:44.036  INFO 14676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-03 10:34:44.036  INFO 14676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-12-03 10:34:44.054  INFO 14676 --- [restartedMain] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring embedded WebApplicationContext
+2021-12-03 10:34:44.054  INFO 14676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 214 ms
+2021-12-03 10:34:44.080  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-12-03 10:34:46.817  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-12-03 10:34:46.820  INFO 14676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-03 10:34:46.825  INFO 14676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-03 10:34:46.858  INFO 14676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-03 10:34:46.858  INFO 14676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 10:34:46.927  WARN 14676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-03 10:34:46.966  WARN 14676 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-03 10:34:46.984  INFO 14676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-03 10:34:46.991  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/APIMascotas'
+2021-12-03 10:34:46.996  INFO 14676 --- [restartedMain] com.sv.ApiMascotasApplication            : Started ApiMascotasApplication in 3.184 seconds (JVM running for 2191.224)
+2021-12-03 10:34:46.997  INFO 14676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-03 10:35:01.699  INFO 14676 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/APIMascotas]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-03 10:35:01.699  INFO 14676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-03 10:35:01.700  INFO 14676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-03 10:38:42.958  INFO 14676 --- [RMI TCP Connection(56)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-12-03 10:38:42.973  INFO 14676 --- [RMI TCP Connection(56)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 10:38:42.974  INFO 14676 --- [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-12-03 10:38:52.699  INFO 14676 --- [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
